@@ -1,0 +1,85 @@
+{
+  "decisions": [
+    {
+      "agent": "product_manager",
+      "decision": "product_spec_created",
+      "rationale": "A straightforward application for managing personal tasks.",
+      "data": {
+        "features": 6,
+        "user_stories": 5,
+        "must_have": [
+          "Task Creation",
+          "Task Listing",
+          "Task Status Update"
+        ]
+      }
+    },
+    {
+      "agent": "architect",
+      "decision": "architecture_created",
+      "rationale": "13 endpoints across 5 files",
+      "data": {
+        "endpoints": 13
+      }
+    },
+    {
+      "agent": "tech_lead",
+      "decision": "constraints_set",
+      "rationale": "The proposed architecture for Simple Todo is largely sound and adheres to most ForgeAI standards. Key areas for improvement include refining authentic",
+      "data": {
+        "critical_issues": 0,
+        "auth_endpoints": 8,
+        "pagination_required": 1
+      }
+    },
+    {
+      "agent": "qa",
+      "decision": "qa_review_complete",
+      "rationale": "QA score: 80/100",
+      "data": {
+        "score": 80,
+        "blockers": [
+          "No pagination on GET /tasks.",
+          "GET /tasks does not support filtering by status.",
+          "PUT /tasks/{task_id} does not prevent editing completed tasks.",
+          "Missing 404 error handling for single-resource task endpoints."
+        ]
+      }
+    },
+    {
+      "agent": "security",
+      "decision": "security_review_complete",
+      "rationale": "Security score: 70/100",
+      "data": {
+        "score": 70
+      }
+    },
+    {
+      "agent": "code_review",
+      "decision": "code_review_complete",
+      "rationale": "Maintainability: 65/100",
+      "data": {
+        "maintainability_score": 65
+      }
+    },
+    {
+      "agent": "performance",
+      "decision": "performance_review_complete",
+      "rationale": "Performance score: 75/100",
+      "data": {
+        "score": 75
+      }
+    },
+    {
+      "agent": "orchestrator",
+      "decision": "pipeline_complete",
+      "rationale": "V6 score: 78/100",
+      "data": {
+        "total_time": 114.88,
+        "can_export": true
+      }
+    }
+  ],
+  "conflicts": [],
+  "shared_context_keys": []
+}
